@@ -81,11 +81,14 @@ select {
     /* grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr); */
     background-color: rgb(248, 243, 243);
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .cel-div {
-    border: 1px solid black;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
   }
 
   .title {

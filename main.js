@@ -1,11 +1,16 @@
-var DEFAULT_GRID = 18;
-var DEFAULT_COLOR = "rgb(255, 255, 255)"
-var sizePicker = document.getElementById("sizeSlider");
-
+const DEFAULT_GRID = 24;
+const DEFAULT_COLOR = "rgb(255, 255, 255)"
 const grid = document.getElementsByClassName('grid');
+const gridSizeShow = document.getElementById('sliderValue');
 
-var size = sizePicker.addEventListener('change', function(e) {
+let sizePicker = document.getElementById("sizeSlider");
+
+
+sizePicker.addEventListener('change', function(e) {
     gridValue = e.target.value;
+    gridSizeShow.innerText = `Grid size ${sizePicker.value} x ${sizePicker.value}`;
+    console.log(gridSizeShow.innerText);
+    console.log(gridValue);
 })
 
 createDiv = () => {
@@ -29,11 +34,12 @@ generateGrid = (n) => {
         grid[0].appendChild(createDiv());        
     }
     gridSize();
-    console.log(size);
+    console.log(sizePicker.value);
 }
 
 resetGrid = () => {
     grid.innerHTML = '';
 }
+
 
 generateGrid(DEFAULT_GRID);
