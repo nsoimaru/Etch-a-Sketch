@@ -1,6 +1,7 @@
 const DEFAULT_COLOR = "rgb(255, 255, 255)";
 const DEFAULT_SIZE = 16;
 const sizeSlider = document.getElementById('sizeSlider');
+const sliderValue = document.getElementById('sliderValue')
 
 const grid = document.getElementById('grid');
 sizeSlider.onchange = (e) => changeGridSize(e.target.value);
@@ -18,8 +19,13 @@ reloadGrid = () => {
     createGrid(currentSize);
 }
 
+updateSliderValue = (value) => {
+    sliderValue.innerHTML = `Grid size: ${value} x ${value}`;
+}
+
 changeGridSize = (value) => {
     setCurrentSize(value);
+    updateSliderValue(value);
     reloadGrid()
 }
 
