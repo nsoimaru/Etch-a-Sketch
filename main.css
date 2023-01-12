@@ -94,6 +94,7 @@ select {
   }
 
   .game {
+    place-content: center;
     gap: 1em;
   }
 
