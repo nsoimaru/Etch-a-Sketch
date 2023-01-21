@@ -7,11 +7,13 @@ const sliderValue = document.getElementById('sliderValue');
 const colorValue = document.getElementById('colorPicker');
 const grid = document.getElementById('grid');
 const game = document.getElementById('game');
+console.log("🚀 ~ file: main.js:10 ~ game", game)
 const color = document.getElementById('colorPicker');
 
 color.onclick = (e) => e.target.value;
 sizeSlider.onchange = (e) => changeGridSize(e.target.value);
 game.onmousemove = (e) => changeColor(e)
+console.log("🚀 ~ file: main.js:16 ~ game", game)
 
 divElementColor = (color) => {
     console.log('it is working!');
